@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibe-trading-bot"
+version = "0.2.1"
+description = "Risk-first AI-native crypto paper trading assistant with Obsidian reports."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Liu Minghao" }]
+dependencies = [
+  "apscheduler>=3.10",
+  "ccxt>=4.4",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "plotly>=5.22",
+  "pydantic>=2.7",
+  "python-dotenv>=1.0",
+  "pyyaml>=6.0",
+  "streamlit>=1.36",
+]
+
+[project.optional-dependencies]
+ai = ["openai>=1.40"]
+dev = ["pytest>=8.2", "ruff>=0.5"]
+
+[project.scripts]
+vibe-trader = "vibe_trader.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

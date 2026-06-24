@@ -1,0 +1,12 @@
+# Deliberately not used by default. Prefer configs/live_binance_spot_small.yaml
+# after all docs/live_trading_gate.md checks pass.
+trading_mode: live
+
+risk:
+  allow_live_trading: false
+  max_symbol_exposure_pct: 0.05
+  max_total_exposure_pct: 0.10
+  max_single_trade_loss_pct: 0.002
+  max_daily_loss_pct: 0.005
+  cooldown_minutes: 240
+  max_consecutive_losses: 2

@@ -1,0 +1,68 @@
+project:
+  name: vibe-trading-bot
+  timezone: Asia/Shanghai
+
+trading_mode: sandbox
+
+database:
+  path: data/vibe_trader_sandbox.sqlite3
+
+exchange:
+  name: binance
+  sandbox: true
+  symbols: ["BTC/USDT", "ETH/USDT"]
+  timeframes: ["15m", "1h", "4h"]
+  ohlcv_limit: 260
+  synthetic_seed: 14789
+
+portfolio:
+  initial_cash: 1000.0
+  quote_currency: USDT
+
+strategy:
+  name: trend_rsi_macd
+  fast_ma: 20
+  slow_ma: 50
+  trend_ma: 200
+  rsi_period: 14
+  rsi_entry_min: 45
+  rsi_entry_max: 72
+  rsi_exit_min: 38
+  atr_period: 14
+  volume_ma: 20
+  min_volume_ratio: 0.75
+  stop_loss_pct: 0.015
+  take_profit_pct: 0.03
+  trailing_stop_pct: 0.018
+
+risk:
+  max_symbol_exposure_pct: 0.20
+  max_total_exposure_pct: 0.40
+  max_single_trade_loss_pct: 0.005
+  max_daily_loss_pct: 0.02
+  cooldown_minutes: 60
+  max_consecutive_losses: 3
+  max_price_gap_pct: 0.08
+  stale_candle_minutes: 45
+  min_quote_balance: 10.0
+  dust_base_qty: 0.000001
+  require_reconciliation: true
+  allow_live_trading: false
+
+execution:
+  order_type: market
+  quote_order_size_pct: 0.10
+  max_order_quote: 100.0
+  slippage_bps: 10
+  fee_bps: 10
+
+reporting:
+  obsidian_dir: reports/obsidian
+  dashboard_file: reports/obsidian/account_dashboard.md
+
+schedule:
+  interval_minutes: 15
+
+ai:
+  provider: local
+  model: ""
