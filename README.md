@@ -4,6 +4,12 @@ Risk-first AI-native crypto trading assistant with Obsidian reports and an execu
 
 > This project is for research, paper trading, sandbox validation, and carefully gated small-capital spot execution. It is not financial advice and does not guarantee profit.
 
+<p align="center">
+  <img src="assets/screenshots/freqtrade-github.png" alt="Freqtrade public GitHub page screenshot" width="900">
+</p>
+
+<sub>Image source: public Freqtrade GitHub page screenshot, [https://github.com/freqtrade/freqtrade](https://github.com/freqtrade/freqtrade). Used as a visual reference for the open-source crypto trading bot ecosystem; this project is independent and not affiliated with Freqtrade.</sub>
+
 ## What It Does
 
 - Watches BTC/USDT and ETH/USDT on a 15-minute cycle.
