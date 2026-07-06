@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2
+
+- Added GitHub Actions CI for Python 3.11 and 3.12.
+- Added README CI badge.
+- Documented CI safety boundaries for synthetic data, paper trading, and live-key isolation.
+
 ## 0.2.1
 
 - Added shared performance analytics for orders and equity curves.

@@ -1,5 +1,7 @@
 # Vibe Trading Bot
 
+[![CI](https://github.com/StaryMoon/vibe-trading-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/StaryMoon/vibe-trading-bot/actions/workflows/ci.yml)
+
 Risk-first AI-native crypto trading assistant with Obsidian reports and an executable dashboard.
 
 > This project is for research, paper trading, sandbox validation, and carefully gated small-capital spot execution. It is not financial advice and does not guarantee profit.
@@ -125,6 +127,8 @@ vibe-trader performance
 
 Details: [docs/risk_policy.md](docs/risk_policy.md)
 
+CI only runs synthetic/paper-trading checks and never touches live exchange keys. Details: [docs/ci_safety_checks.md](docs/ci_safety_checks.md)
+
 ## Obsidian Dashboard
 
 Generated files:
@@ -157,7 +161,7 @@ It also shows the same performance metrics as the Obsidian report, so the CLI, M
 
 ## Project Status
 
-This is v0.2 MVP:
+This is v0.2.2 MVP:
 
 - Suitable for local demo, paper trading, sandbox wiring, and architecture iteration.
 - Supports small-capital live spot execution only when all gates are enabled.

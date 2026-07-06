@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vibe-trading-bot"
-version = "0.2.1"
+version = "0.2.2"
 description = "Risk-first AI-native crypto paper trading assistant with Obsidian reports."
 readme = "README.md"
 requires-python = ">=3.11"
